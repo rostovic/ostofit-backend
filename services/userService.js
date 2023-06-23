@@ -480,7 +480,6 @@ exports.getVideoData = async (videoID, myID) => {
     FROM user_details ud
   
     INNER JOIN user_videos uv ON uv.id_user = ud.id
-    LEFT JOIN video_likes vl ON vl.id_user = ud.id
     WHERE uv.id = :videoID
   
     SELECT
